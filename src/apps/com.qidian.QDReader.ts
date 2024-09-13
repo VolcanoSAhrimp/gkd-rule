@@ -13,9 +13,6 @@ export default defineGkdApp({
             matches: [
               '@ImageView[index=1][width=86]'
             ],
-            snapshotUrls: [
-              'https://i.gkd.li/i/15463078'
-            ],
             activityIds: [
               'com.qq.e.tg.RewardvideoPortraitADActivity'
             ]
@@ -33,9 +30,6 @@ export default defineGkdApp({
             matches: [
               '[text="使用漫画券订阅本话"]'
             ],
-            snapshotUrls: [
-              'https://i.gkd.li/snapshot/17192257007760'
-            ],
             exampleUrls: [
               'https://m.gkd.li/57941037/6654679e-58a9-4d6c-85a3-11bd2f82c15e'
             ]
@@ -48,9 +42,6 @@ export default defineGkdApp({
             ],
             matches: [
               '[text="使用"]'
-            ],
-            snapshotUrls: [
-              'https://i.gkd.li/snapshot/1719226387811'
             ],
             exampleUrls: [
               'https://m.gkd.li/57941037/6654679e-58a9-4d6c-85a3-11bd2f82c15e'
