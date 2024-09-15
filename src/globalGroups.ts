@@ -1,3 +1,6 @@
 import { defineGkdGlobalGroups } from '@gkd-kit/define';
 
-export default defineGkdGlobalGroups([]);
+export default defineGkdGlobalGroups([
+    // 全局规则
+    
+]);

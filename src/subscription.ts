@@ -4,6 +4,7 @@ import categories from './categories';
 import globalGroups from './globalGroups';
 
 export default defineGkdSubscription({
+  // 订阅详情
   id: 557,
   name: '火山虾的GKD订阅',
   version: 0,
