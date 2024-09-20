@@ -173,7 +173,7 @@ export default defineGkdApp({
       activityIds: ['com.mihoyo.hyperion.web2.MiHoYoWebActivity'],
       rules: [
         {
-          name: '点击签到',
+          name: '签到',
           key: 0,
           matches: [
             '[text="【崩坏3】每日签到"] >4 View[childCount=11] > @View[childCount=3][visibleToUser=true] > Image[index=0]',
