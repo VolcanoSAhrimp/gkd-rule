@@ -146,8 +146,8 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '关闭倒计时广告',
       key: 15,
+      name: '关闭倒计时广告',
       desc: '左上角叉叉',
       rules: [
         {
@@ -157,8 +157,8 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '功能类-漫画券使用',
       key: 16,
+      name: '功能类-漫画券使用',
       desc: '点击使用-确认',
       rules: [
         {
@@ -181,8 +181,8 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '关闭广告',
       key: 17,
+      name: '关闭广告',
       desc: '观看n秒立即关闭广告',
       rules: [
         {
@@ -195,8 +195,8 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '红包-马上抢',
       key: 18,
+      name: '红包-马上抢',
       desc: '红包-马上抢',
       actionDelay: 1000,
       rules: [
@@ -208,8 +208,8 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '红包奖励领取',
       key: 19,
+      name: '红包奖励领取',
       desc: '红包奖励领取',
       rules: [
         {
@@ -220,8 +220,8 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '自动点击阅读积分',
       key: 20,
+      name: '自动点击阅读积分',
       desc: '自动点击阅读积分',
       rules: [
         {
@@ -234,8 +234,8 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '首页-抽奖-自动抽奖',
       key: 21,
+      name: '首页-抽奖-自动抽奖',
       desc: '首页抽奖自动抽奖',
       enable: true,
       activityIds: [
@@ -265,8 +265,8 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '福利中心-自动看视频',
       key: 22,
+      name: '福利中心-自动看视频',
       desc: '自动看视频',
       enable: true,
       actionDelay: 1000,
