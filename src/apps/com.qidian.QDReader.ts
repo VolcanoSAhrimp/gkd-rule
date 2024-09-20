@@ -151,35 +151,36 @@ export default defineGkdApp({
       desc: '左上角叉叉',
       rules: [
         {
+          fastQuery: true,
           matches: ['@ImageView[index=1][width=86]'],
           activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
         },
       ],
     },
-    {
-      key: 16,
-      name: '功能类-漫画券使用',
-      desc: '点击使用-确认',
-      rules: [
-        {
-          name: '点击漫画券使用',
-          key: 0,
-          matches: ['[text="使用漫画券订阅本话"]'],
-          exampleUrls: [
-            'https://m.gkd.li/57941037/6654679e-58a9-4d6c-85a3-11bd2f82c15e',
-          ],
-        },
-        {
-          name: '确认漫画券使用',
-          key: 1,
-          preKeys: [0],
-          matches: ['[text="使用"]'],
-          exampleUrls: [
-            'https://m.gkd.li/57941037/6654679e-58a9-4d6c-85a3-11bd2f82c15e',
-          ],
-        },
-      ],
-    },
+    // {
+    //   key: 16,
+    //   name: '功能类-漫画券使用',
+    //   desc: '点击使用-确认',
+    //   rules: [
+    //     {
+    //       name: '点击漫画券使用',
+    //       key: 0,
+    //       matches: ['[text="使用漫画券订阅本话"]'],
+    //       exampleUrls: [
+    //         'https://m.gkd.li/57941037/6654679e-58a9-4d6c-85a3-11bd2f82c15e',
+    //       ],
+    //     },
+    //     {
+    //       name: '确认漫画券使用',
+    //       key: 1,
+    //       preKeys: [0],
+    //       matches: ['[text="使用"]'],
+    //       exampleUrls: [
+    //         'https://m.gkd.li/57941037/6654679e-58a9-4d6c-85a3-11bd2f82c15e',
+    //       ],
+    //     },
+    //   ],
+    // },
     // {
     //   key: 17,
     //   name: '关闭广告',
