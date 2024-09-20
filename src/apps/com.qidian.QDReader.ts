@@ -147,7 +147,7 @@ export default defineGkdApp({
     },
     {
       key: 15,
-      name: '功能类-关闭倒计时广告',
+      name: '全屏广告-关闭倒计时广告',
       desc: '左上角叉叉',
       rules: [
         {
@@ -181,119 +181,119 @@ export default defineGkdApp({
         },
       ],
     },
-    // {
-    //   key: 17,
-    //   name: '关闭广告',
-    //   desc: '观看n秒立即关闭广告',
-    //   rules: [
-    //     {
-    //       matches: [
-    //         '@TextView + TextView[text~="已观看视频\\\\d{2}秒，可获得奖励"]',
-    //       ],
-    //       quickFind: true,
-    //       activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
-    //     },
-    //   ],
-    // },
-    // {
-    //   key: 18,
-    //   name: '红包-马上抢',
-    //   desc: '红包-马上抢',
-    //   actionDelay: 1000,
-    //   rules: [
-    //     {
-    //       matches: ['@TextView[text="马上抢"]'],
-    //       quickFind: true,
-    //       activityIds: ['com.qidian.QDReader.ui.activity.QDReaderActivity'],
-    //     },
-    //   ],
-    // },
-    // {
-    //   key: 19,
-    //   name: '红包奖励领取',
-    //   desc: '红包奖励领取',
-    //   rules: [
-    //     {
-    //       matches: ['@TextView[text="立即领取"]'],
-    //       quickFind: true,
-    //       activityIds: ['com.qidian.QDReader.ui.activity.QDReaderActivity'],
-    //     },
-    //   ],
-    // },
-    // {
-    //   key: 20,
-    //   name: '自动点击阅读积分',
-    //   desc: '自动点击阅读积分',
-    //   rules: [
-    //     {
-    //       matches: ['@TextView[text~="\\\\d{1,3}"][height=63]'],
-    //       activityIds: [
-    //         'com.qidian.QDReader.ui.activity.ReadTimeMainPageActivity',
-    //         'com.qidian.QDReader.ui.activity.MainGroupActivity',
-    //       ],
-    //     },
-    //   ],
-    // },
-    // {
-    //   key: 21,
-    //   name: '首页-抽奖-自动抽奖',
-    //   desc: '首页抽奖自动抽奖',
-    //   enable: true,
-    //   activityIds: [
-    //     'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-    //     'com.qidian.QDReader.ui.activity.SplashActivity',
-    //   ],
-    //   rules: [
-    //     {
-    //       name: '点击签到',
-    //       key: 0,
-    //       matches: [
-    //         '@View[desc="点击抽奖+1"]',
-    //         '[vid="webViewContainer"] >7 View[desc="看视频，得抽奖机会"]',
-    //       ],
-    //     },
-    //     {
-    //       name: '关闭签到后的弹窗',
-    //       key: 1,
-    //       matches: ['@View[desc="抽 奖"]'],
-    //       activityIds: ['com.qidian.QDReader.ui.activity.QDBrowserActivity'],
-    //     },
-    //     {
-    //       name: '返回上一个页面',
-    //       key: 2,
-    //       matches: ['@View[desc="看视频抽奖喜+1"]'],
-    //     },
-    //   ],
-    // },
-    // {
-    //   key: 22,
-    //   name: '福利中心-自动看视频',
-    //   desc: '自动看视频',
-    //   enable: true,
-    //   actionDelay: 1000,
-    //   forcedTime: 2000,
-    //   activityIds: [
-    //     'com.qidian.QDReader.ui.activity.MainGroupActivity',
-    //     'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-    //   ],
-    //   rules: [
-    //     {
-    //       name: '点击看视频领福利',
-    //       key: 0,
-    //       matches: ['@Button[text="看视频领福利"]'],
-    //       forcedTime: 2000,
-    //     },
-    //     {
-    //       name: '点击看视频',
-    //       key: 1,
-    //       matches: ['@View[desc="看视频"]'],
-    //     },
-    //     {
-    //       name: '点击福利中心的宝箱',
-    //       key: 2,
-    //       matches: ['@View[desc="看视频开宝箱"]'],
-    //     },
-    //   ],
-    // },
+    {
+      key: 17,
+      name: '全屏广告-关闭广告',
+      desc: '观看n秒立即关闭广告',
+      rules: [
+        {
+          matches: [
+            '@TextView + TextView[text~="已观看视频\\\\d{2}秒，可获得奖励"]',
+          ],
+          quickFind: true,
+          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+        },
+      ],
+    },
+    {
+      key: 18,
+      name: '功能类-红包-马上抢',
+      desc: '红包-马上抢',
+      actionDelay: 1000,
+      rules: [
+        {
+          matches: ['@TextView[text="马上抢"]'],
+          quickFind: true,
+          activityIds: ['com.qidian.QDReader.ui.activity.QDReaderActivity'],
+        },
+      ],
+    },
+    {
+      key: 19,
+      name: '功能类-红包奖励领取',
+      desc: '红包奖励领取',
+      rules: [
+        {
+          matches: ['@TextView[text="立即领取"]'],
+          quickFind: true,
+          activityIds: ['com.qidian.QDReader.ui.activity.QDReaderActivity'],
+        },
+      ],
+    },
+    {
+      key: 20,
+      name: '功能类-自动点击阅读积分',
+      desc: '自动点击阅读积分',
+      rules: [
+        {
+          matches: ['@TextView[text~="\\\\d{1,3}"][height=63]'],
+          activityIds: [
+            'com.qidian.QDReader.ui.activity.ReadTimeMainPageActivity',
+            'com.qidian.QDReader.ui.activity.MainGroupActivity',
+          ],
+        },
+      ],
+    },
+    {
+      key: 21,
+      name: '功能类-首页-抽奖-自动抽奖',
+      desc: '首页抽奖自动抽奖',
+      enable: true,
+      activityIds: [
+        'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+        'com.qidian.QDReader.ui.activity.SplashActivity',
+      ],
+      rules: [
+        {
+          name: '点击签到',
+          key: 0,
+          matches: [
+            '@View[desc="点击抽奖+1"]',
+            '[vid="webViewContainer"] >7 View[desc="看视频，得抽奖机会"]',
+          ],
+        },
+        {
+          name: '关闭签到后的弹窗',
+          key: 1,
+          matches: ['@View[desc="抽 奖"]'],
+          activityIds: ['com.qidian.QDReader.ui.activity.QDBrowserActivity'],
+        },
+        {
+          name: '返回上一个页面',
+          key: 2,
+          matches: ['@View[desc="看视频抽奖喜+1"]'],
+        },
+      ],
+    },
+    {
+      key: 22,
+      name: '功能类-福利中心-自动看视频',
+      desc: '自动看视频',
+      enable: true,
+      actionDelay: 1000,
+      forcedTime: 2000,
+      activityIds: [
+        'com.qidian.QDReader.ui.activity.MainGroupActivity',
+        'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+      ],
+      rules: [
+        {
+          name: '点击看视频领福利',
+          key: 0,
+          matches: ['@Button[text="看视频领福利"]'],
+          forcedTime: 2000,
+        },
+        {
+          name: '点击看视频',
+          key: 1,
+          matches: ['@View[desc="看视频"]'],
+        },
+        {
+          name: '点击福利中心的宝箱',
+          key: 2,
+          matches: ['@View[desc="看视频开宝箱"]'],
+        },
+      ],
+    },
   ],
 });
