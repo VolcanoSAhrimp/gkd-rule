@@ -178,7 +178,6 @@ export default defineGkdApp({
           matches: [
             '[text="【崩坏3】每日签到"] >4 View[childCount=11] > @View[childCount=3][visibleToUser=true] > Image[index=0]',
           ],
-          snapshotUrls: ['https://i.gkd.li/snapshot/1719221161142'],
           exampleUrls: [
             'https://m.gkd.li/57941037/6654679e-58a9-4d6c-85a3-11bd2f82c15e',
           ],
@@ -190,7 +189,6 @@ export default defineGkdApp({
           matches: [
             '[text="【崩坏3】每日签到"] >3 TextView[index=2][visibleToUser=true]',
           ],
-          snapshotUrls: ['https://i.gkd.li/i/14371439'],
           exampleUrls: [
             'https://m.gkd.li/57941037/b02eca70-f7d3-4169-99d6-9906c534392a',
           ],
@@ -202,7 +200,6 @@ export default defineGkdApp({
           matches: [
             '[text="【崩坏3】每日签到"] - View > TextView[clickable=true]',
           ],
-          snapshotUrls: ['https://i.gkd.li/snapshot/1719221161142'],
           exampleUrls: [
             'https://m.gkd.li/57941037/c232ba4c-d50e-4887-85ab-91739928119e',
           ],
