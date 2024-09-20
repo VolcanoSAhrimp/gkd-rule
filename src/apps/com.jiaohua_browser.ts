@@ -5,7 +5,7 @@ export default defineGkdApp({
   name: 'JMComic2',
   groups: [
     {
-      name: '关闭个人界面广告',
+      name: '局部广告-关闭个人界面广告',
       key: 0,
       desc: '76*75',
       rules: [
