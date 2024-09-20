@@ -164,5 +164,83 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '功能类-崩三自动签到',
+      key: 0,
+      desc: '点击签到-关闭弹窗-返回',
+      enable: true,
+      forcedTime: 5000,
+      activityIds: ['com.mihoyo.hyperion.web2.MiHoYoWebActivity'],
+      rules: [
+        {
+          name: '点击签到',
+          key: 0,
+          matches: [
+            '[text="【崩坏3】每日签到"] >4 View[childCount=11] > @View[childCount=3][visibleToUser=true] > Image[index=0]',
+          ],
+          snapshotUrls: ['https://i.gkd.li/snapshot/1719221161142'],
+          exampleUrls: [
+            'https://m.gkd.li/57941037/6654679e-58a9-4d6c-85a3-11bd2f82c15e',
+          ],
+        },
+        {
+          name: '关闭签到后的弹窗',
+          key: 1,
+          preKeys: [0],
+          matches: [
+            '[text="【崩坏3】每日签到"] >3 TextView[index=2][visibleToUser=true]',
+          ],
+          snapshotUrls: ['https://i.gkd.li/i/14371439'],
+          exampleUrls: [
+            'https://m.gkd.li/57941037/b02eca70-f7d3-4169-99d6-9906c534392a',
+          ],
+        },
+        {
+          name: '返回上一个页面',
+          key: 2,
+          preKeys: [1],
+          matches: [
+            '[text="【崩坏3】每日签到"] - View > TextView[clickable=true]',
+          ],
+          snapshotUrls: ['https://i.gkd.li/snapshot/1719221161142'],
+          exampleUrls: [
+            'https://m.gkd.li/57941037/c232ba4c-d50e-4887-85ab-91739928119e',
+          ],
+        },
+      ],
+    },
+    {
+      name: '功能类-绝区零自动签到',
+      key: 1,
+      desc: '点击签到-关闭弹窗-返回',
+      enable: true,
+      forcedTime: 5000,
+      activityIds: ['com.mihoyo.hyperion.web2.MiHoYoWebActivity'],
+      rules: [
+        {
+          name: '点击签到',
+          key: 0,
+          matches: [
+            '[text="【绝区零】每日签到"] >4 View[childCount=11] > @View[childCount=3][visibleToUser=true] > Image[index=0]',
+          ],
+        },
+        {
+          name: '关闭签到后的弹窗',
+          key: 1,
+          preKeys: [0],
+          matches: [
+            '[text="【绝区零】每日签到"] >3 TextView[index=2][visibleToUser=true]',
+          ],
+        },
+        {
+          name: '返回上一个页面',
+          key: 2,
+          preKeys: [1],
+          matches: [
+            '[text="【绝区零】每日签到"] - View > TextView[clickable=true]',
+          ],
+        },
+      ],
+    },
   ],
 });

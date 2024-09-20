@@ -102,5 +102,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '功能类-卡卡领取',
+      key: 7,
+      desc: '在我的卡卡中自动领取',
+      rules: [
+        {
+          matches: ['@Button[text="领取"]'],
+          quickFind: true,
+          activityIds: ['com.huawei.pluginachievement.ui.AchieveKaKaActivity'],
+        },
+      ],
+    },
   ],
 });

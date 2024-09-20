@@ -98,5 +98,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '功能类-关闭本子下面的广告',
+      key: 0,
+      desc: '关闭本子下面的广告',
+      rules: [
+        {
+          matches: ['[vid="imageButton_banner_close"]'],
+          quickFind: true,
+          activityIds: ['com.picacomic.fregata.activities.MainActivity'],
+        },
+      ],
+    },
   ],
 });

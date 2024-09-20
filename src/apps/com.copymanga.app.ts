@@ -190,5 +190,15 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '全屏广告-广告跳过',
+      key: 6,
+      desc: '58,41',
+      rules: [
+        {
+          matches: ['@ImageView[width=58][height=58]', '@Image[width=41]'],
+        },
+      ],
+    },
   ],
 });
