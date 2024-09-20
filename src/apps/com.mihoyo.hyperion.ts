@@ -166,7 +166,7 @@ export default defineGkdApp({
     },
     {
       name: '功能类-崩三自动签到',
-      key: 0,
+      key: 8,
       desc: '点击签到-关闭弹窗-返回',
       enable: true,
       forcedTime: 5000,
@@ -211,7 +211,7 @@ export default defineGkdApp({
     },
     {
       name: '功能类-绝区零自动签到',
-      key: 1,
+      key: 9,
       desc: '点击签到-关闭弹窗-返回',
       enable: true,
       forcedTime: 5000,
