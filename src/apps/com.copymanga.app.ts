@@ -205,5 +205,25 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '局部广告-点击中心广告',
+      key: 1,
+      desc: '点击中心广告-无法关闭',
+      enable: true,
+      activityIds: ['com.copymanga.app.MainActivity'],
+      rules: [
+        {
+          name: '点击中心广告',
+          key: 0,
+          matches: ['@ImageView[width=32 && height=32]'],
+        },
+        {
+          name: '点击看视频',
+          preKeys: [0],
+          key: 1,
+          matches: ['@TextView[text="无法关闭"]'],
+        },
+      ],
+    },
   ],
 });
