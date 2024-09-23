@@ -207,7 +207,7 @@ export default defineGkdApp({
     },
     {
       name: '局部广告-点击中心广告',
-      key: 1,
+      key: 7,
       desc: '点击中心广告-无法关闭',
       enable: true,
       activityIds: ['com.copymanga.app.MainActivity'],
