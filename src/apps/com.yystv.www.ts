@@ -10,7 +10,10 @@ export default defineGkdApp({
       desc: '点击叉叉',
       rules: [
         {
-          matches: ['@ImageView[width=35]', '@ImageView[width=58]'],
+          matches: [
+            '@ImageView[width=35][height=35]',
+            '@ImageView[width=58][height=58]',
+          ],
           // activityIds: [
           //     'com.csdy.yedw.ui.book.read.ReadBookActivity'
           // ]

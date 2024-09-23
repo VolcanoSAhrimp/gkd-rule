@@ -196,7 +196,12 @@ export default defineGkdApp({
       desc: '58,41',
       rules: [
         {
-          matches: ['@ImageView[width=58][height=58]', '@Image[width=41]'],
+          matches: [
+            '@ImageView[width=58][height=58]',
+            '@Image[width=41]',
+            '@ImageView[width=69][height=69]',
+            '@ImageView[desc="关闭"][vid="ad_close"]',
+          ],
         },
       ],
     },
