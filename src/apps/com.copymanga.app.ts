@@ -218,6 +218,7 @@ export default defineGkdApp({
           matches: ['@ImageView[width=32 && height=32]'],
         },
         {
+          fastQuery: true,
           name: '点击看视频',
           preKeys: [0],
           key: 1,
