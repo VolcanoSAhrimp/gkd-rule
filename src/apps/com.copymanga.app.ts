@@ -149,6 +149,12 @@ export default defineGkdApp({
             'https://i.gkd.li/i/12909005',
           ],
         },
+        {
+          key: 3,
+          name: '其它游戏广告',
+          activityIds: 'com.copymanga.app.MainActivity',
+          matches: '[desc="关闭" || width=43 && height=43]',
+        },
       ],
     },
     {
