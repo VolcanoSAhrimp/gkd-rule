@@ -155,6 +155,12 @@ export default defineGkdApp({
           activityIds: 'com.copymanga.app.MainActivity',
           matches: '[desc="关闭" || width=43 && height=43]',
         },
+        {
+          key: 4,
+          name: '游戏广告',
+          activityIds: 'com.copymanga.app.MainActivity',
+          matches: '[desc="关闭" || width=43 && height=43]',
+        },
       ],
     },
     {
