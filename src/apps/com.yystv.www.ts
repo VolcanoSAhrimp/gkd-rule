@@ -21,6 +21,11 @@ export default defineGkdApp({
           key: 2,
           matches: ['@ImageView[width=58][height=58]'],
         },
+        {
+          name: '38',
+          key: 3,
+          matches: ['@ImageView[width=38][height=38]'],
+        },
         // matches: [
         //   '@ImageView[width=35][height=35]',
         //   '@ImageView[width=58][height=58]',
