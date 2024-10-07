@@ -31,11 +31,9 @@ export default defineGkdApp({
           matches: ['@ImageView[width=38][height=38]'],
         },
         {
-          name: 'id/beizi_interstitial_ad_close_iv"]',
+          name: '46',
           key: 4,
-          matches: [
-            '@ImageView[id="com.yystv.www:id/beizi_interstitial_ad_close_iv"]',
-          ],
+          matches: ['@ImageView[width=46][height=46]'],
         },
         {
           name: '57',
