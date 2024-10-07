@@ -10,6 +10,10 @@ export default defineGkdApp({
       desc: '点击叉叉',
       enable: true,
       fastQuery: true,
+      activityIds: [
+        'com.beizi.ad.internal.activity.BeiZiInterstitialActivity',
+        'com.csdy.yedw.ui.book.read.ReadBookActivity',
+      ],
       rules: [
         {
           name: '35',
@@ -25,6 +29,18 @@ export default defineGkdApp({
           name: '38',
           key: 3,
           matches: ['@ImageView[width=38][height=38]'],
+        },
+        {
+          name: 'id/beizi_interstitial_ad_close_iv"]',
+          key: 4,
+          matches: [
+            '@ImageView[id="com.yystv.www:id/beizi_interstitial_ad_close_iv"]',
+          ],
+        },
+        {
+          name: '57',
+          key: 5,
+          matches: ['@ImageView[width=57][height=57]'],
         },
         // matches: [
         //   '@ImageView[width=35][height=35]',

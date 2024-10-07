@@ -7,6 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '全屏广告-弹窗广告',
+      enable: true,
       activityIds: [
         'com.copymanga.app.MainActivity',
         'com.reaper.flutter.reaper_flutter_plugin.activity.ReaperSplashActivity',
@@ -120,6 +121,7 @@ export default defineGkdApp({
     {
       key: 2,
       name: '局部广告-卡片广告',
+      enable: true,
       rules: [
         {
           key: 0,
@@ -166,6 +168,7 @@ export default defineGkdApp({
     {
       key: 3,
       name: '全屏广告-关闭赞助提示',
+      enable: true,
       activityIds: 'com.copymanga.app.MainActivity',
       rules: [
         {
@@ -177,6 +180,7 @@ export default defineGkdApp({
     {
       key: 4,
       name: '功能类-自动确认线路',
+      enable: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -191,6 +195,7 @@ export default defineGkdApp({
       key: 5,
       name: '权限提示-通知权限',
       matchTime: 30000,
+      enable: true,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
@@ -206,6 +211,7 @@ export default defineGkdApp({
       name: '全屏广告-广告跳过',
       key: 6,
       desc: '58,41',
+      enable: true,
       rules: [
         {
           matches: [
