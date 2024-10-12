@@ -10,10 +10,7 @@ export default defineGkdApp({
       desc: '点击叉叉',
       enable: true,
       fastQuery: true,
-      activityIds: [
-        'com.beizi.ad.internal.activity.BeiZiInterstitialActivity',
-        'com.csdy.yedw.ui.book.read.ReadBookActivity',
-      ],
+      activityIds: [],
       rules: [
         {
           name: '35',
