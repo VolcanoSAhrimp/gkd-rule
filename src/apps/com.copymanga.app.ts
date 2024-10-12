@@ -214,12 +214,19 @@ export default defineGkdApp({
       enable: true,
       rules: [
         {
-          matches: [
+          anyMatches: [
             '@ImageView[width=58][height=58]',
             '@Image[width=41]',
             '@ImageView[width=69][height=69]',
             '@ImageView[desc="关闭"][vid="ad_close"]',
           ],
+        },
+        {
+          name: '| 跳过',
+          key: 0,
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches: ['@TextView[text="| 跳过"]'],
         },
       ],
     },

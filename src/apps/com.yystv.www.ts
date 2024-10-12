@@ -40,13 +40,11 @@ export default defineGkdApp({
           key: 5,
           matches: ['@ImageView[width=57][height=57]'],
         },
-        // matches: [
-        //   '@ImageView[width=35][height=35]',
-        //   '@ImageView[width=58][height=58]',
-        // ],
-        // activityIds: [
-        //     'com.csdy.yedw.ui.book.read.ReadBookActivity'
-        // ]
+        {
+          name: '85',
+          key: 6,
+          matches: ['@ImageView[width=85][height=85]'],
+        },
       ],
     },
   ],
