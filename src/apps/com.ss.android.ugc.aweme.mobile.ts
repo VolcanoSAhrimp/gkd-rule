@@ -49,5 +49,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '功能类-未登录状态下自动点击取消事件',
+      desc: '这是给不想登录抖音但时候又弹出广告的，点击[取消]',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.main.MainActivity',
+          matches:
+            '@View < ViewGroup < LinearLayout + TextView[text="登录后，体验完整功能"]',
+        },
+      ],
+    },
   ],
 });
