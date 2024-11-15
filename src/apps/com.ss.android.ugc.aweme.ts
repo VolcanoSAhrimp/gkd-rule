@@ -361,7 +361,7 @@ export default defineGkdApp({
         {
           activityIds: '.main.MainActivity',
           matches:
-            '@View < ViewGroup < LinearLayout + TextView[text="登录后，体验完整功能"]',
+            '@View < ViewGroup < LinearLayout + TextView[text~="登录后，体验完整功能|登录后即可点赞喜欢的内容|登录发现更多精彩|登录看朋友内容"]',
         },
       ],
     },
