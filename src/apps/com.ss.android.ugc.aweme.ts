@@ -369,7 +369,7 @@ export default defineGkdApp({
           key: 1,
           activityIds: '.live.LivePlayActivity',
           matches:
-            '@TextView[text~="送出小心心礼物需支付\\\\d{1,3}钻，确定支付？"]',
+            '@Button[text="取消"] < LinearLayout < FrameLayout - FrameLayout >3 TextView[text~="送出小心心礼物需支付\\\\d{1,3}钻，确定支付？"]',
         },
       ],
     },
