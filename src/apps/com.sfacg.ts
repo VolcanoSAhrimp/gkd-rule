@@ -15,7 +15,10 @@ export default defineGkdApp({
         {
           name: '点击签到',
           key: 0,
-          matches: ['[vid="sign_container"] > TextView[text="签到"]'],
+          matches: [
+            '[vid="sign_container"] > TextView[text="签到"]',
+            '@TextView[text="签到"]',
+          ],
         },
         {
           name: '点击日期',
@@ -28,6 +31,20 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1],
           matches: ['[text=""]'],
+        },
+      ],
+    },
+    {
+      name: '功能类-自动领取任务',
+      key: 1,
+      desc: '点击领取任务',
+      enable: true,
+      activityIds: ['com.sf.ui.my.welfare.WelfareActivity'],
+      rules: [
+        {
+          name: '点击领取',
+          key: 0,
+          matches: ['[vid="reward_container"] > TextView[text="领取"]'],
         },
       ],
     },

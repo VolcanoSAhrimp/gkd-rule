@@ -356,12 +356,20 @@ export default defineGkdApp({
       key: 22,
       name: '功能类-未登录状态下自动点击取消事件',
       desc: '这是给不想登录抖音但时候又弹出广告的，点击[取消]',
+      enable: true,
       resetMatch: 'app',
       rules: [
         {
-          activityIds: '.main.MainActivity',
+          key: 0,
+          activityIds: '',
           matches:
             '@View < ViewGroup < LinearLayout + TextView[text~="登录后，体验完整功能|登录后即可点赞喜欢的内容|登录发现更多精彩|登录看朋友内容"]',
+        },
+        {
+          key: 1,
+          activityIds: '.live.LivePlayActivity',
+          matches:
+            '@TextView[text~="送出小心心礼物需支付\\d{1,3}钻，确定支付？"]',
         },
       ],
     },

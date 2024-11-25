@@ -114,5 +114,25 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 8,
+      name: '功能类-自动抽奖',
+      desc: '慎用',
+      enable: true,
+      activityIds: ['.h5pro.core.H5ProWebViewActivity'],
+      rules: [
+        {
+          name: '点击抽奖',
+          key: 0,
+          matches: '@TextView[text="立即抽奖消耗30卡卡/次"]',
+        },
+        {
+          name: '点击知道了',
+          key: 1,
+          preKeys: [0],
+          matches: '@TextView[text="知道了"]',
+        },
+      ],
+    },
   ],
 });
