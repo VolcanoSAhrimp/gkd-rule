@@ -40,11 +40,12 @@ export default defineGkdApp({
       desc: '点击领取任务',
       enable: true,
       activityIds: ['com.sf.ui.my.welfare.WelfareActivity'],
+      actionMaximum: 8,
       rules: [
         {
-          name: '点击领取',
+          name: '领取任务',
           key: 0,
-          matches: ['[vid="reward_container"] > TextView[text="领取"]'],
+          matches: ['@TextView[text="领取任务"]'],
         },
       ],
     },
