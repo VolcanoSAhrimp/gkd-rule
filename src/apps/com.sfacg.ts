@@ -16,7 +16,7 @@ export default defineGkdApp({
           name: '点击签到',
           key: 0,
           matches: [
-            '[vid="sign_container"] > TextView[text="签到"]',
+            '@TextView <2 LinearLayout <2 [vid="top_menu_login_layout"]',
             '@TextView[text="签到"]',
           ],
         },
