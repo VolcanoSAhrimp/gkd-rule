@@ -278,20 +278,18 @@ export default defineGkdApp({
       ],
       rules: [
         {
-          name: '点击看视频领福利',
-          key: 0,
-          matches: ['@Button[text="看视频领福利"]'],
-          forcedTime: 2000,
-        },
-        {
           name: '点击看视频',
-          key: 1,
-          matches: ['@View[desc="看视频"]'],
+          key: 0,
+          matches: ['@TextView[text="看视频"]'],
+          matchTime: 1,
         },
         {
           name: '点击福利中心的宝箱',
-          key: 2,
-          matches: ['@View[desc="看视频开宝箱"]'],
+          key: 1,
+          preKeys: [0],
+          matches: [
+            '@TextView < View <4 View < View <2 WebView < WebView < FrameLayout < [vid="webViewContainer"]',
+          ],
         },
       ],
     },
