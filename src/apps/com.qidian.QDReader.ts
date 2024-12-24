@@ -267,29 +267,76 @@ export default defineGkdApp({
     },
     {
       key: 22,
-      name: '功能类-福利中心-自动看视频',
+      name: '功能类-签到-领福利-自动看视频',
       desc: '自动看视频',
       enable: true,
-      actionDelay: 1000,
-      forcedTime: 2000,
-      activityIds: [
-        'com.qidian.QDReader.ui.activity.MainGroupActivity',
-        'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-      ],
+      // actionDelay: 1000,
+      // forcedTime: 2000,
+      // activityIds: [
+      //   'com.qidian.QDReader.ui.activity.MainGroupActivity',
+      //   'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+      // ],
       rules: [
         {
-          name: '点击看视频',
+          name: '点击签到',
           key: 0,
-          matches: ['@TextView[text="看视频"]'],
-          matchTime: 1,
+          matches: ['@TextView[vid="button_text_id"][text="签到"]'],
+          activityIds: ['.ui.activity.MainGroupActivity'],
         },
         {
-          name: '点击福利中心的宝箱',
-          key: 1,
+          name: '点击领福利',
           preKeys: [0],
+          key: 1,
+          matches: ['@TextView[vid="button_text_id"][text="领福利"]'],
+          activityIds: ['.ui.activity.MainGroupActivity'],
+        },
+        {
+          name: '点击看视频',
+          key: 2,
+          matches: ['@TextView[text="看视频"]'],
+          actionDelay: 1000,
+          activityIds: ['.ui.activity.QDBrowserActivity'],
+        },
+        {
+          name: '点击知道了',
+          preKeys: [2, 4],
+          key: 3,
           matches: [
             '@TextView < View <4 View < View <2 WebView < WebView < FrameLayout < [vid="webViewContainer"]',
           ],
+          actionDelay: 1000,
+          activityIds: ['.ui.activity.QDBrowserActivity'],
+        },
+        {
+          name: '点击去抽奖+1',
+          key: 4,
+          matches: [
+            '@TextView <2 View <3 View <5 View <3 View < WebView < WebView < FrameLayout < [vid="webViewContainer"]',
+          ],
+          actionDelay: 1000,
+          activityIds: ['.ui.activity.QDBrowserActivity'],
+        },
+        {
+          name: '看视频抽奖机会+1',
+          key: 5,
+          matches: [
+            '@TextView <5 View <4 View < WebView < WebView < FrameLayout < [vid="webViewContainer"]',
+          ],
+          activityIds: ['.ui.activity.QDBrowserActivity'],
+        },
+      ],
+    },
+    {
+      key: 23,
+      name: '功能类-继续观看',
+      desc: '广告内有时候会弹出是否继续观看的弹窗',
+      enable: true,
+      activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+      rules: [
+        {
+          name: '点击继续观看',
+          key: 0,
+          matches: ['@TextView <3 LinearLayout < [id="android:id/content"]'],
         },
       ],
     },
