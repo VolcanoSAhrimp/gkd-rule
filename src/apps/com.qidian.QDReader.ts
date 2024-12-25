@@ -282,6 +282,8 @@ export default defineGkdApp({
           key: 0,
           matches: ['@TextView[vid="button_text_id"][text="签到"]'],
           activityIds: ['.ui.activity.MainGroupActivity'],
+          matchDelay: 1000,
+          actionMaximum: 1,
         },
         {
           name: '点击领福利',
@@ -304,7 +306,7 @@ export default defineGkdApp({
           matches: [
             '@TextView < View <4 View < View <2 WebView < WebView < FrameLayout < [vid="webViewContainer"]',
           ],
-          actionDelay: 1000,
+          forcedTime: 1000,
           activityIds: ['.ui.activity.QDBrowserActivity'],
         },
         {
@@ -337,6 +339,7 @@ export default defineGkdApp({
           name: '点击继续观看',
           key: 0,
           matches: ['@TextView <3 LinearLayout < [id="android:id/content"]'],
+          forcedTime: 2000,
         },
       ],
     },
