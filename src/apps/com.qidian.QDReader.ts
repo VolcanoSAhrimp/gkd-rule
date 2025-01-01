@@ -270,20 +270,13 @@ export default defineGkdApp({
       name: '功能类-签到-领福利-自动看视频',
       desc: '自动看视频',
       enable: true,
-      // actionDelay: 1000,
-      // forcedTime: 2000,
-      // activityIds: [
-      //   'com.qidian.QDReader.ui.activity.MainGroupActivity',
-      //   'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-      // ],
       rules: [
         {
           name: '点击签到',
           key: 0,
           matches: ['@TextView[vid="button_text_id"][text="签到"]'],
           activityIds: ['.ui.activity.MainGroupActivity'],
-          matchDelay: 1000,
-          actionMaximum: 1,
+          actionDelay: 2000,
         },
         {
           name: '点击领福利',
@@ -296,13 +289,14 @@ export default defineGkdApp({
           name: '点击看视频',
           key: 2,
           matches: ['@TextView[text="看视频"]'],
-          actionDelay: 1000,
+          actionDelay: 1500,
           activityIds: ['.ui.activity.QDBrowserActivity'],
         },
         {
           name: '点击知道了',
           preKeys: [2, 4],
           key: 3,
+          matchTime: 2000,
           matches: [
             '@TextView < View <4 View < View <2 WebView < WebView < FrameLayout < [vid="webViewContainer"]',
           ],
@@ -325,6 +319,15 @@ export default defineGkdApp({
             '@TextView <5 View <4 View < WebView < WebView < FrameLayout < [vid="webViewContainer"]',
           ],
           activityIds: ['.ui.activity.QDBrowserActivity'],
+        },
+        {
+          name: '抽奖抽完了直接关掉',
+          key: 6,
+          matches: [
+            '@View -3 [text="明天再来"]',
+            '@TextView < View -3 [text="明天再来"]',
+          ],
+          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
         },
       ],
     },
