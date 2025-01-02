@@ -19,6 +19,7 @@ export default defineGkdApp({
             '@TextView <4 ViewGroup <2 ViewGroup <4 ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup <2 ViewGroup < ViewGroup < FrameLayout < [vid="ksad_tk_view"]',
             '@ViewGroup < ViewGroup <3 ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [vid="ksad_tk_view"]',
             '[vid="ksad_kwad_web_navi_close"]',
+            '[vid="ksad_web_exit_intercept_negative_btn"]',
           ],
         },
       ],
