@@ -40,6 +40,7 @@ export default defineGkdApp({
       desc: '点击领取任务',
       enable: true,
       activityIds: ['com.sf.ui.my.welfare.WelfareActivity'],
+      actionCd: 500,
       actionMaximum: 8,
       rules: [
         {

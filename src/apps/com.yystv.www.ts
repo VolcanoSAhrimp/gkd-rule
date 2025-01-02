@@ -9,16 +9,15 @@ export default defineGkdApp({
       key: 1,
       desc: '点击叉叉',
       enable: true,
-      fastQuery: true,
       activityIds: [],
       rules: [
         {
-          name: '35',
-          key: 1,
-          matches: [
+          anyMatches: [
             '@TextView <4 ViewGroup <2 ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup <2 ViewGroup < ViewGroup < FrameLayout < [vid="ksad_tk_view"]',
             '@ImageView < ViewGroup < ViewGroup <3 ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [vid="ksad_tk_view"]',
             '@ImageView < FrameLayout <2 FrameLayout < FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
+            '@TextView <4 ViewGroup <2 ViewGroup <4 ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup <2 ViewGroup < ViewGroup < FrameLayout < [vid="ksad_tk_view"]',
+            '@ViewGroup < ViewGroup <3 ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [vid="ksad_tk_view"]',
             '@ImageView[width=35][height=35]',
             '@ImageView[width=58][height=58]',
             '@ImageView[width=58][height=58]',
