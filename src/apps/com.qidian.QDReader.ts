@@ -187,10 +187,28 @@ export default defineGkdApp({
       desc: '观看n秒立即关闭广告',
       rules: [
         {
+          name: '关闭广告-老版倒计时广告',
+          key: 0,
           matches: [
             '@TextView + TextView[text~="已观看视频\\\\d{2}秒，可获得奖励"]',
           ],
-          quickFind: true,
+          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+        },
+        {
+          name: '关闭微信广告',
+          key: 1,
+          matches: [
+            '@View < ViewGroup <8 ViewGroup <2 ViewGroup <4 ViewGroup <2 ViewGroup < ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
+          ],
+          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+        },
+        {
+          name: '关闭广告-新版倒计时广告',
+          key: 2,
+          actionDelay: 16000,
+          matches: [
+            '@ViewGroup < ViewGroup <2 ViewGroup <3 ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
+          ],
           activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
         },
       ],
