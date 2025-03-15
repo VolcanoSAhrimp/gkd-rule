@@ -197,8 +197,9 @@ export default defineGkdApp({
         {
           name: '关闭微信广告',
           key: 1,
-          matches: [
+          anyMatches: [
             '@View < ViewGroup <8 ViewGroup <2 ViewGroup <4 ViewGroup <2 ViewGroup < ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
+            '@ViewGroup < ViewGroup <4 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
           ],
           activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
         },
