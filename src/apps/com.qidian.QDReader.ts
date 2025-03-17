@@ -194,15 +194,15 @@ export default defineGkdApp({
           ],
           activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
         },
-        {
-          name: '关闭微信广告',
-          key: 1,
-          anyMatches: [
-            '@View < ViewGroup <8 ViewGroup <2 ViewGroup <4 ViewGroup <2 ViewGroup < ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
-            '@ViewGroup < ViewGroup <4 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
-          ],
-          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
-        },
+        // {
+        //   name: '关闭微信广告',
+        //   key: 1,
+        //   anyMatches: [
+        //     '@View < ViewGroup <8 ViewGroup <2 ViewGroup <4 ViewGroup <2 ViewGroup < ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
+        //     '@ViewGroup < ViewGroup <4 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
+        //   ],
+        //   activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+        // },
         {
           name: '关闭广告-新版倒计时广告',
           key: 2,
