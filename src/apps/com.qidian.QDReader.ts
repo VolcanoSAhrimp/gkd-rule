@@ -207,10 +207,14 @@ export default defineGkdApp({
           name: '关闭广告-新版倒计时广告',
           key: 2,
           actionDelay: 16000,
-          matches: [
+          anyMatches: [
             '@ViewGroup < ViewGroup <2 ViewGroup <3 ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
+            '@ViewGroup < ViewGroup <2 ViewGroup <4 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
           ],
-          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+          activityIds: [
+            'com.qq.e.tg.RewardvideoPortraitADActivity',
+            'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+          ],
         },
       ],
     },
