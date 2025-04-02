@@ -35,18 +35,42 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '功能类-自动领取任务',
+      name: '功能类-刷点券5次',
       key: 1,
       desc: '点击领取任务',
       enable: true,
-      activityIds: ['com.sf.ui.my.welfare.WelfareActivity'],
-      actionCd: 500,
-      actionMaximum: 8,
+      activityIds: ['com.qq.e.ads.PortraitADActivity'],
       rules: [
         {
-          name: '领取任务',
+          name: '免费领3代券',
           key: 0,
-          matches: ['@TextView[text="领取任务"]'],
+          actionDelay: 500,
+          matches: ['[vid="sign_in_ad_goto"]'],
+        },
+
+        {
+          name: '放弃福利',
+          key: 1,
+          matches: [
+            '@TextView < FrameLayout <2 LinearLayout < FrameLayout < FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
+            '@TextView[text="放弃福利"]',
+          ],
+        },
+        {
+          name: '继续看视频',
+          key: 2,
+          anyMatches: [
+            '@TextView <2 LinearLayout <6 FrameLayout <2 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
+            '@TextView[text="继续看视频"]',
+            '@FrameLayout <2 FrameLayout < FrameLayout < [id="android:id/content"]',
+          ],
+        },
+        {
+          name: '最终点击',
+          key: 3,
+          matches: [
+            '@FrameLayout < FrameLayout <2 LinearLayout <2 FrameLayout <3 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
+          ],
         },
       ],
     },

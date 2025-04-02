@@ -32,6 +32,7 @@ export default defineGkdApp({
             '@ImageView < FrameLayout <2 FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
             '@TextView[text="关闭"]',
             '@ImageView < FrameLayout <3 FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
+            '@ImageView <2 FrameLayout <2 FrameLayout <2 FrameLayout <6 FrameLayout < FrameLayout < [id="android:id/content"]',
           ],
         },
       ],
