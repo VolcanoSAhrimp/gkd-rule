@@ -39,7 +39,10 @@ export default defineGkdApp({
       key: 1,
       desc: '点击领取任务',
       enable: true,
-      activityIds: ['com.qq.e.ads.PortraitADActivity'],
+      activityIds: [
+        'com.sf.ui.main.MainActivity',
+        'com.qq.e.ads.PortraitADActivity',
+      ],
       rules: [
         {
           name: '免费领3代券',
@@ -51,9 +54,11 @@ export default defineGkdApp({
         {
           name: '放弃福利',
           key: 1,
-          matches: [
+          anyMatches: [
             '@TextView < FrameLayout <2 LinearLayout < FrameLayout < FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
             '@TextView[text="放弃福利"]',
+            '@ImageView < FrameLayout < FrameLayout <3 FrameLayout < FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
+            '@ImageView < FrameLayout <2 FrameLayout < FrameLayout <2 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
           ],
         },
         {
@@ -63,6 +68,7 @@ export default defineGkdApp({
             '@TextView <2 LinearLayout <6 FrameLayout <2 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
             '@TextView[text="继续看视频"]',
             '@FrameLayout <2 FrameLayout < FrameLayout < [id="android:id/content"]',
+            'TextView[text="关闭广告 "]',
           ],
         },
         {
