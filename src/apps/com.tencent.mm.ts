@@ -688,5 +688,29 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 38,
+      name: '功能类-无线电看视频广告',
+      desc: '拿火腿币',
+      enable: true,
+      activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
+      actionCd: 10000,
+      rules: [
+        {
+          key: 0,
+          fastQuery: true,
+          matches: '@TextView - View > TextView[text="看视频广告"]',
+          snapshotUrls: ['https://i.gkd.li/i/20146657'],
+        },
+        {
+          key: 1,
+          preKeys: [0],
+
+          matches:
+            '@TextView[text="广告"] < FrameLayout <2 FrameLayout - FrameLayout > TextView[text="已获得奖励"]',
+          snapshotUrls: ['https://i.gkd.li/i/20146660'],
+        },
+      ],
+    },
   ],
 });
