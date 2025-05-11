@@ -694,20 +694,19 @@ export default defineGkdApp({
       desc: '拿火腿币',
       enable: true,
       activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
-      actionCd: 10000,
       rules: [
         {
           key: 0,
-          fastQuery: true,
+          actionCd: 5000,
           matches: '@TextView - View > TextView[text="看视频广告"]',
+          exampleUrls: 'https://e.gkd.li/0f1a2b4c-3d5f-4a8b-9c7d-6e0f2b3c4d5e',
           snapshotUrls: ['https://i.gkd.li/i/20146657'],
         },
         {
           key: 1,
           preKeys: [0],
-
           matches:
-            '@TextView[text="广告"] < FrameLayout <2 FrameLayout - FrameLayout > TextView[text="已获得奖励"]',
+            '@FrameLayout <2 FrameLayout  - FrameLayout >3 TextView[text="已获得奖励"]',
           snapshotUrls: ['https://i.gkd.li/i/20146660'],
         },
       ],
