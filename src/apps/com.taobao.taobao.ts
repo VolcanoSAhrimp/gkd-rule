@@ -243,5 +243,32 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 20,
+      name: '功能类-打开淘宝会员',
+      desc: '点击取消',
+      activityIds: 'com.alibaba.android.rimet.biz.ui.activity.MainActivity',
+      rules: [
+        {
+          key: 0,
+          name: '点击好物沉浸看"',
+          activityIds: 'com.taobao.themis.container.app.TMSActivity',
+          matchDelay: 2000,
+          action: 'clickCenter',
+          matches: '@Button - View > TextView[text^="好物沉浸看"][text$=")"]',
+          snapshotUrls: 'https://i.gkd.li/i/15124094',
+        },
+        {
+          key: 1,
+          name: '退出',
+          activityIds:
+            'com.taobao.android.detail2.core.framework.NewDetailActivity',
+          action: 'clickCenter',
+          matchDelay: 16000,
+          matches: '[vid="nav_back"]',
+          snapshotUrls: 'https://i.gkd.li/i/20348536',
+        },
+      ],
+    },
   ],
 });
