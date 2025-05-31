@@ -245,7 +245,7 @@ export default defineGkdApp({
     },
     {
       key: 20,
-      name: '功能类-打开淘宝会员',
+      name: '功能类-好物沉浸看拿奖励',
       desc: '点击取消',
       activityIds: 'com.alibaba.android.rimet.biz.ui.activity.MainActivity',
       rules: [

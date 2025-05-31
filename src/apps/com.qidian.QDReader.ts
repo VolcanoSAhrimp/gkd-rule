@@ -194,15 +194,15 @@ export default defineGkdApp({
           ],
           activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
         },
-        // {
-        //   name: '关闭微信广告',
-        //   key: 1,
-        //   anyMatches: [
-        //     '@View < ViewGroup <8 ViewGroup <2 ViewGroup <4 ViewGroup <2 ViewGroup < ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
-        //     '@ViewGroup < ViewGroup <4 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
-        //   ],
-        //   activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
-        // },
+        {
+          name: '关闭微信广告',
+          key: 1,
+          matchDelay: 5000,
+          matches: ['@TextView - TextView[text="奖励已领取"]'],
+          activityIds: [
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          ],
+        },
         {
           name: '关闭广告-新版倒计时广告',
           key: 2,
@@ -359,12 +359,18 @@ export default defineGkdApp({
       name: '功能类-继续观看',
       desc: '广告内有时候会弹出是否继续观看的弹窗',
       enable: true,
-      activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+      activityIds: [
+        'com.qq.e.tg.RewardvideoPortraitADActivity',
+        '.ui.activity.QDBrowserActivity',
+      ],
       rules: [
         {
           name: '点击继续观看',
           key: 0,
-          matches: ['@TextView <3 LinearLayout < [id="android:id/content"]'],
+          anyMatches: [
+            '@TextView <3 LinearLayout < [id="android:id/content"]',
+            '@View -4 TextView[text^="视频将于"][text$="后续播"]',
+          ],
           forcedTime: 2000,
         },
       ],
