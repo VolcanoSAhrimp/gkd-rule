@@ -13,7 +13,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          matches: '[text*="跳过"]',
+          matches: ['[text$="跳过"]', '[text^="跳过"]'],
         },
       ],
     },
