@@ -27,6 +27,7 @@ export default defineGkdApp({
         'TextView[text="跳过"][text.length=2]',
         'ViewGroup[desc="top_close_button"]',
         'ImageView[vid="ad_close"]',
+        'ImageView[vid*="close" || vid*="btn"]',
       ],
     },
   ],
