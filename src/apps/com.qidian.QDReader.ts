@@ -191,8 +191,12 @@ export default defineGkdApp({
           key: 0,
           matches: [
             '@TextView + TextView[text~="已观看视频\\\\d{2}秒，可获得奖励"]',
+            'TextView[text="领取成功" || text="奖励已领取"]',
           ],
-          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+          activityIds: [
+            'com.qq.e.tg.RewardvideoPortraitADActivity',
+            '.ui.activity.QDBrowserActivity',
+          ],
         },
         {
           name: '关闭微信广告',
@@ -362,6 +366,7 @@ export default defineGkdApp({
       activityIds: [
         'com.qq.e.tg.RewardvideoPortraitADActivity',
         '.ui.activity.QDBrowserActivity',
+        'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
       ],
       rules: [
         {
@@ -370,6 +375,8 @@ export default defineGkdApp({
           anyMatches: [
             '@TextView <3 LinearLayout < [id="android:id/content"]',
             '@View -4 TextView[text^="视频将于"][text$="后续播"]',
+            'Button[text="继续观看"]',
+            '@View < View + View[id="touchGuide"]',
           ],
           forcedTime: 2000,
         },
