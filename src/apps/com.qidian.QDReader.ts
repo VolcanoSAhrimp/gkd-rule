@@ -214,10 +214,12 @@ export default defineGkdApp({
           anyMatches: [
             '@ViewGroup < ViewGroup <2 ViewGroup <3 ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
             '@ViewGroup < ViewGroup <2 ViewGroup <4 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
+            '@LinearLayout <2 LinearLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout + FrameLayout >6 TextView[text="咨询更多活动详情"]',
           ],
           activityIds: [
             'com.qq.e.tg.RewardvideoPortraitADActivity',
             'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           ],
         },
       ],
