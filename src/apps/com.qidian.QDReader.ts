@@ -189,8 +189,8 @@ export default defineGkdApp({
         {
           name: '关闭广告-老版倒计时广告',
           key: 0,
-          matches: [
-            '@TextView + TextView[text~="已观看视频\\\\d{1,3}秒，可获得奖励"]',
+          anyMatches: [
+            '@TextView + TextView[text~="已观看视频\\\\d{2}秒，可获得奖励"]',
             '@TextView[text="| 跳过"] - TextView[text="领取成功" || text="奖励已领取"]',
           ],
           activityIds: [
