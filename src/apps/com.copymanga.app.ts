@@ -163,6 +163,12 @@ export default defineGkdApp({
           activityIds: 'com.copymanga.app.MainActivity',
           matches: '[desc="关闭" || width=43 && height=43]',
         },
+        {
+          key: 5,
+          name: '百度广告',
+          activityIds: 'com.baidu.mobads.sdk.api.MobRewardVideoActivity',
+          matches: '@ImageView - RelativeLayout >2 [text="反馈"] ',
+        },
       ],
     },
     {
@@ -231,23 +237,22 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '局部广告-点击中心广告',
+      name: '局部广告-弹出广告关闭',
       key: 7,
       desc: '点击中心广告-无法关闭',
       enable: true,
-      activityIds: ['com.copymanga.app.MainActivity'],
+      activityIds: [
+        'com.yifan.yf_ads.activity.YFSplashActivity',
+        'com.baidu.mobads.sdk.api.MobRewardVideoActivity',
+      ],
       rules: [
         {
           name: '点击中心广告',
           key: 0,
-          matches: ['@ImageView[width=32 && height=32]'],
-        },
-        {
-          fastQuery: true,
-          name: '点击看视频',
-          preKeys: [0],
-          key: 1,
-          matches: ['@TextView[text="无法关闭"]'],
+          matches: [
+            'ViewGroup[desc*="close" || desc*="btn"]',
+            'ViewGroup[desc*="skip" || desc*="btn"]',
+          ],
         },
       ],
     },
