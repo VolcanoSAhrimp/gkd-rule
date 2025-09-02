@@ -198,6 +198,7 @@ export default defineGkdApp({
           activityIds: [
             'com.qq.e.tg.RewardvideoPortraitADActivity',
             '.ui.activity.QDBrowserActivity',
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           ],
         },
         {
