@@ -320,7 +320,7 @@ export default defineGkdApp({
         {
           name: '点击看视频',
           key: 2,
-          matches: ['@TextView[text="看视频"]'],
+          matches: ['@TextView[text="去完成"]'],
           actionDelay: 1500,
           activityIds: ['.ui.activity.QDBrowserActivity'],
         },
