@@ -322,7 +322,10 @@ export default defineGkdApp({
           key: 2,
           matches: ['@TextView[text="去完成"]'],
           actionDelay: 1500,
-          activityIds: ['.ui.activity.QDBrowserActivity'],
+          activityIds: [
+            '.ui.activity.QDBrowserActivity',
+            'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+          ],
         },
         {
           name: '点击知道了',
