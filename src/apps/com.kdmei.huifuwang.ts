@@ -29,5 +29,14 @@ export default defineGkdApp({
         'ImageView[vid*="close" || vid*="btn"]',
       ],
     },
+    {
+      key: 3,
+      name: '功能类-章节最后的广告死吧',
+      desc: '还是单独开一个解决每个章节最后的广告好了',
+      enable: true,
+      rules: [
+        '@ImageView < FrameLayout <3 FrameLayout < LinearLayout < FrameLayout < FrameLayout < [vid="bannerContainer"]',
+      ],
+    },
   ],
 });
