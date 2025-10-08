@@ -320,7 +320,7 @@ export default defineGkdApp({
         {
           name: '点击看视频',
           key: 2,
-          matches: ['@TextView[text="去完成"]'],
+          matches: ['@TextView[text="去完成"]'], //起点那群吊人随时可能改变按钮名称
           actionDelay: 1500,
           activityIds: [
             '.ui.activity.QDBrowserActivity',

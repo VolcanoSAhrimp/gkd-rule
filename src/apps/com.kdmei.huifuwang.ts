@@ -20,7 +20,6 @@ export default defineGkdApp({
     {
       key: 2,
       name: '功能类-广告跳过',
-      activityIds: 'io.legado.app.ui.book.read.ReadBookActivity',
       enable: true,
       rules: [
         'ImageView[desc$="关闭"]',
