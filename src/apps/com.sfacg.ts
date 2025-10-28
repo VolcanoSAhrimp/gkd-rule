@@ -71,7 +71,7 @@ export default defineGkdApp({
           key: 3,
           anyMatches: [
             '@TextView < FrameLayout <2 LinearLayout < FrameLayout < FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
-            '@TextView[text="放弃福利" || text="继续看视频" || text="立即退出"]',
+            '@TextView[text="放弃福利" || text*="继续看视频*" || text="立即退出"]',
           ],
         },
         {
