@@ -49,7 +49,7 @@ export default defineGkdApp({
           key: 0,
           actionDelay: 2000,
           matches: [
-            '@TextView <2 LinearLayout > TextView[text~="今日还剩[1-9]次"]',
+            '@TextView - LinearLayout > TextView[text~="今日还剩[1-9]次"]',
           ],
         },
         {
