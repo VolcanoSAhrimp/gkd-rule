@@ -78,6 +78,7 @@ export default defineGkdApp({
           name: '最终点击',
           key: 4,
           matches: [
+            '@ImageView < FrameLayout < FrameLayout - LinearLayout >2 TextView[text="恭喜获得奖励"]',
             '@ImageView < FrameLayout < FrameLayout <2 LinearLayout <2 FrameLayout <4 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
             '@ImageView < FrameLayout < FrameLayout <2 LinearLayout <2 FrameLayout <6 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
             '@ImageView < FrameLayout < FrameLayout <3 FrameLayout < FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
