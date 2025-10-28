@@ -45,37 +45,42 @@ export default defineGkdApp({
       ],
       rules: [
         {
-          name: '免费领3代券',
+          name: '点击免费领3代券',
           key: 0,
-          actionDelay: 500,
-          matches: ['[vid="sign_in_ad_goto"]'],
+          actionDelay: 2000,
+          matches: [
+            '@TextView <2 LinearLayout > TextView[text~="今日还剩[1-9]次"]',
+          ],
+        },
+        {
+          name: '点击收下点券',
+          key: 1,
+          preKeys: [0],
+          matches: ['@TextView[text="开心收下"]'],
+        },
+        {
+          name: '玩游戏直接退出',
+          key: 2,
+          anyMatches: [
+            '@ImageView < FrameLayout <4 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
+          ],
         },
 
         {
           name: '放弃福利',
-          key: 1,
+          key: 3,
           anyMatches: [
             '@TextView < FrameLayout <2 LinearLayout < FrameLayout < FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
-            '@TextView[text="放弃福利"]',
-            '@ImageView < FrameLayout < FrameLayout <3 FrameLayout < FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
-            '@ImageView < FrameLayout <2 FrameLayout < FrameLayout <2 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
-          ],
-        },
-        {
-          name: '继续看视频',
-          key: 2,
-          anyMatches: [
-            '@TextView <2 LinearLayout <6 FrameLayout <2 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
-            '@TextView[text="继续看视频"]',
-            '@FrameLayout <2 FrameLayout < FrameLayout < [id="android:id/content"]',
-            'TextView[text="关闭广告 "]',
+            '@TextView[text="放弃福利" || text="继续看视频" || text="立即退出"]',
           ],
         },
         {
           name: '最终点击',
-          key: 3,
+          key: 4,
           matches: [
-            '@FrameLayout < FrameLayout <2 LinearLayout <2 FrameLayout <3 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
+            '@ImageView < FrameLayout < FrameLayout <2 LinearLayout <2 FrameLayout <4 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
+            '@ImageView < FrameLayout < FrameLayout <2 LinearLayout <2 FrameLayout <6 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
+            '@ImageView < FrameLayout < FrameLayout <3 FrameLayout < FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
           ],
         },
       ],
