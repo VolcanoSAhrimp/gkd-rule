@@ -35,7 +35,7 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '功能类-刷点券5次',
+      name: '功能类-刷点券',
       key: 1,
       desc: '点击领取任务',
       enable: true,
@@ -74,16 +74,19 @@ export default defineGkdApp({
             '@TextView[text="放弃福利" || text*="继续看视频*" || text="立即退出"]',
           ],
         },
-        {
-          name: '最终点击',
-          key: 4,
-          matches: [
-            '@ImageView < FrameLayout < FrameLayout - LinearLayout >2 TextView[text="恭喜获得奖励"]',
-            '@ImageView < FrameLayout < FrameLayout <2 LinearLayout <2 FrameLayout <4 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
-            '@ImageView < FrameLayout < FrameLayout <2 LinearLayout <2 FrameLayout <6 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
-            '@ImageView < FrameLayout < FrameLayout <3 FrameLayout < FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
-          ],
-        },
+      ],
+    },
+    {
+      name: '功能类-最终点击',
+      key: 2,
+      desc: '广告点击后最终点击',
+      enable: true,
+      activityIds: ['com.qq.e.ads.PortraitADActivity'],
+      rules: [
+        '@ImageView < FrameLayout < FrameLayout - LinearLayout >2 TextView[text="恭喜获得奖励"]',
+        '@ImageView < FrameLayout < FrameLayout <2 LinearLayout <2 FrameLayout <4 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
+        '@ImageView < FrameLayout < FrameLayout <2 LinearLayout <2 FrameLayout <6 FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
+        '@ImageView < FrameLayout < FrameLayout <3 FrameLayout < FrameLayout < RelativeLayout < FrameLayout < FrameLayout < LinearLayout < [id="android:id/content"]',
       ],
     },
   ],
