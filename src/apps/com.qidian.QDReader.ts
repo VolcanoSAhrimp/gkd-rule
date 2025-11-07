@@ -192,11 +192,10 @@ export default defineGkdApp({
           anyMatches: [
             '@TextView + TextView[text~="已观看视频\\\\d{2}秒，可获得奖励"]',
             '@TextView[text="| 跳过"] - TextView[text="领取成功" || text="奖励已领取"]',
-            '@ViewGroup +2 ViewGroup <5 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
             '@LinearLayout <2 LinearLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
+            '@LinearLayout <3 LinearLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
           ],
           activityIds: [
-            'com.qq.e.tg.RewardvideoPortraitADActivity',
             '.ui.activity.QDBrowserActivity',
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           ],
@@ -385,8 +384,17 @@ export default defineGkdApp({
             '@View -4 TextView[text^="视频将于"][text$="后续播"]',
             'Button[text="继续观看"]',
             '@View < View + View[id="touchGuide"]',
+            '@ViewGroup +2 ViewGroup <5 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
           ],
           forcedTime: 2000,
+        },
+        {
+          name: '点击关闭广告',
+          key: 1,
+          preKeys: [0],
+          anyMatches: [
+            '@View < ViewGroup <5 ViewGroup < ViewGroup < ViewGroup < ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
+          ],
         },
       ],
     },
