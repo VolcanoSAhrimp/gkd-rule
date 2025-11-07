@@ -380,13 +380,12 @@ export default defineGkdApp({
           name: '点击继续观看',
           key: 0,
           anyMatches: [
+            '@ViewGroup +2 ViewGroup <5 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
             '@TextView <3 LinearLayout < [id="android:id/content"]',
             '@View -4 TextView[text^="视频将于"][text$="后续播"]',
             'Button[text="继续观看"]',
             '@View < View + View[id="touchGuide"]',
-            '@ViewGroup +2 ViewGroup <5 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
           ],
-          forcedTime: 2000,
         },
         {
           name: '点击关闭广告',
