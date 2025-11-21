@@ -191,9 +191,10 @@ export default defineGkdApp({
           key: 0,
           anyMatches: [
             '@TextView + TextView[text~="已观看视频\\\\d{2}秒，可获得奖励"]',
-            '@TextView[text="| 跳过"] - TextView[text="领取成功" || text="奖励已领取"]',
+            '@TextView - TextView[text="领取成功" || text="奖励已领取"]',
             '@LinearLayout <2 LinearLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
             '@LinearLayout <3 LinearLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
+            '@Image < View -4 TextView[text="点击跳转查看广告详情, 返回后可直接领奖"]',
           ],
           activityIds: [
             'com.qq.e.tg.RewardvideoPortraitADActivity',
