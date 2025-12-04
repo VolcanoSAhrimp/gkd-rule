@@ -382,6 +382,7 @@ export default defineGkdApp({
           name: '点击继续观看',
           key: 0,
           anyMatches: [
+            '@ViewGroup < ViewGroup <3 ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
             '@ViewGroup < ViewGroup <3 ViewGroup <4 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
             '@ViewGroup +2 ViewGroup <5 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
             '@TextView <3 LinearLayout < [id="android:id/content"]',
