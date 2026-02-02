@@ -158,30 +158,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 16,
-      name: '功能类-漫画券使用',
-      desc: '点击使用-确认',
-      rules: [
-        {
-          name: '点击漫画券使用',
-          key: 0,
-          matches: ['[text="使用漫画券订阅本话"]'],
-          exampleUrls: [
-            'https://m.gkd.li/57941037/6654679e-58a9-4d6c-85a3-11bd2f82c15e',
-          ],
-        },
-        {
-          name: '确认漫画券使用',
-          key: 1,
-          preKeys: [0],
-          matches: ['[text="使用"]'],
-          exampleUrls: [
-            'https://m.gkd.li/57941037/6654679e-58a9-4d6c-85a3-11bd2f82c15e',
-          ],
-        },
-      ],
-    },
-    {
       key: 17,
       name: '全屏广告-关闭广告',
       desc: '观看n秒立即关闭广告',
@@ -191,40 +167,8 @@ export default defineGkdApp({
           key: 0,
           anyMatches: [
             '@TextView + TextView[text~="已观看视频\\\\d{2}秒，可获得奖励"]',
-            '@TextView - TextView[text="领取成功" || text="奖励已领取"]',
-            '@LinearLayout <2 LinearLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
-            '@LinearLayout <3 LinearLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
-            '@Image < View -4 TextView[text="点击跳转查看广告详情, 返回后可直接领奖"]',
           ],
-          activityIds: [
-            'com.qq.e.tg.RewardvideoPortraitADActivity',
-            '.ui.activity.QDBrowserActivity',
-            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-          ],
-        },
-        {
-          name: '关闭微信广告',
-          key: 1,
-          matchDelay: 5000,
-          matches: ['@TextView - TextView[text="奖励已领取"]'],
-          activityIds: [
-            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-          ],
-        },
-        {
-          name: '关闭广告-新版倒计时广告',
-          key: 2,
-          actionDelay: 16000,
-          anyMatches: [
-            '@ViewGroup < ViewGroup <2 ViewGroup <3 ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
-            '@ViewGroup < ViewGroup <2 ViewGroup <4 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
-            '@LinearLayout <2 LinearLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout + FrameLayout >6 TextView[text="咨询更多活动详情"]',
-          ],
-          activityIds: [
-            'com.qq.e.tg.RewardvideoPortraitADActivity',
-            'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-          ],
+          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
         },
       ],
     },
@@ -328,76 +272,21 @@ export default defineGkdApp({
             'com.qidian.QDReader.ui.activity.QDBrowserActivity',
           ],
         },
-        {
-          name: '点击知道了',
-          preKeys: [2, 4],
-          key: 3,
-          matchTime: 2000,
-          matches: [
-            '@TextView < View <4 View < View <2 WebView < WebView < FrameLayout < [vid="webViewContainer"]',
-          ],
-          forcedTime: 1000,
-          activityIds: ['.ui.activity.QDBrowserActivity'],
-        },
-        {
-          name: '点击去抽奖+1',
-          key: 4,
-          matches: [
-            '@TextView <2 View <3 View <5 View <3 View < WebView < WebView < FrameLayout < [vid="webViewContainer"]',
-          ],
-          actionDelay: 1000,
-          activityIds: ['.ui.activity.QDBrowserActivity'],
-        },
-        {
-          name: '看视频抽奖机会+1',
-          key: 5,
-          matches: [
-            '@TextView <5 View <4 View < WebView < WebView < FrameLayout < [vid="webViewContainer"]',
-          ],
-          activityIds: ['.ui.activity.QDBrowserActivity'],
-        },
-        {
-          name: '抽奖抽完了直接关掉',
-          key: 6,
-          matches: [
-            '@View -3 [text="明天再来"]',
-            '@TextView < View -3 [text="明天再来"]',
-          ],
-          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
-        },
       ],
     },
     {
       key: 23,
-      name: '功能类-继续观看',
-      desc: '广告内有时候会弹出是否继续观看的弹窗',
+      name: '功能类-新版本广告',
+      desc: '安卓默认api接口找不到详细文本',
       enable: true,
-      activityIds: [
-        'com.qq.e.tg.RewardvideoPortraitADActivity',
-        '.ui.activity.QDBrowserActivity',
-        'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-      ],
       rules: [
         {
-          name: '点击继续观看',
+          name: '点击领取',
           key: 0,
-          anyMatches: [
-            '@ViewGroup < ViewGroup <3 ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
-            '@ViewGroup < ViewGroup <3 ViewGroup <4 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
-            '@ViewGroup +2 ViewGroup <5 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
-            '@TextView <3 LinearLayout < [id="android:id/content"]',
-            '@View -4 TextView[text^="视频将于"][text$="后续播"]',
-            'Button[text="继续观看"]',
-            '@View < View + View[id="touchGuide"]',
+          matches: [
+            '@ViewGroup < ViewGroup <2 ViewGroup <3 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
           ],
-        },
-        {
-          name: '点击关闭广告',
-          key: 1,
-          preKeys: [0],
-          anyMatches: [
-            '@View < ViewGroup <5 ViewGroup < ViewGroup < ViewGroup < ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
-          ],
+          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
         },
       ],
     },
