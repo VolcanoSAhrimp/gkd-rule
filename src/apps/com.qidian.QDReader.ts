@@ -290,5 +290,44 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 24,
+      name: '功能类-跳转微信',
+      desc: '需要跳转到微信观看',
+      enable: true,
+      rules: [
+        {
+          name: '点击关闭广告',
+          key: 0,
+          matches: [
+            '@ViewGroup < ViewGroup <3 ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
+          ],
+          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+        },
+        {
+          name: '点击放弃奖励',
+          preKeys: [0],
+          key: 1,
+          matches: [
+            '@View < ViewGroup <7 ViewGroup < ViewGroup < ViewGroup < ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
+          ],
+          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+        },
+      ],
+    },
+    {
+      key: 25,
+      name: '功能类-自动阅读-新版',
+      desc: '自动阅读-新版',
+      enable: false,
+      rules: [
+        {
+          name: '点击下一章',
+          key: 0,
+          matches: ['@TextView[text="下一章"]'],
+          activityIds: ['.ui.activity.QDBrowserActivity'],
+        },
+      ],
+    },
   ],
 });
