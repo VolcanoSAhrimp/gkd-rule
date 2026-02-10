@@ -317,15 +317,20 @@ export default defineGkdApp({
     },
     {
       key: 25,
-      name: '功能类-自动阅读-新版',
-      desc: '自动阅读-新版',
+      name: '功能类-奖励已领取',
+      desc: '',
       enable: false,
       rules: [
         {
           name: '点击下一章',
           key: 0,
-          matches: ['@TextView[text="下一章"]'],
-          activityIds: ['.ui.activity.QDBrowserActivity'],
+          matches: [
+            'TextView[text="奖励已领取"]',
+            '@ImageView < LinearLayout < LinearLayout <2 LinearLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
+          ],
+          activityIds: [
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          ],
         },
       ],
     },
