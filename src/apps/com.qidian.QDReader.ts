@@ -300,7 +300,7 @@ export default defineGkdApp({
           name: '点击关闭广告',
           key: 0,
           matches: [
-            '@ViewGroup < ViewGroup <3 ViewGroup <2 ViewGroup < ViewGroup < ViewGroup < ViewGroup < ViewGroup < FrameLayout < [id="android:id/content"]',
+            '@ViewGroup -2 ViewGroup > ViewGroup[width=548][height=92]',
           ],
           activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
         },
@@ -326,6 +326,7 @@ export default defineGkdApp({
           key: 0,
           matches: [
             'TextView[text="奖励已领取"]',
+            '@LinearLayout - FrameLayout > TextView[text="反馈"]',
             '@ImageView < LinearLayout < LinearLayout <2 LinearLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
           ],
           activityIds: [
