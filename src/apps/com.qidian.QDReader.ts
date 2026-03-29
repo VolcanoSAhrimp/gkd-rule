@@ -362,13 +362,8 @@ export default defineGkdApp({
           matches: ['@TextView[text="｜跳过"] - TextView[text="奖励已领取"]'],
           activityIds: [
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+            '.ui.activity.QDBrowserActivity',
           ],
-        },
-        {
-          name: '点击关闭广告-跳过',
-          key: 2,
-          matches: ['@TextView[text="| 跳过"]'],
-          activityIds: ['.ui.activity.QDBrowserActivity'],
         },
       ],
     },
