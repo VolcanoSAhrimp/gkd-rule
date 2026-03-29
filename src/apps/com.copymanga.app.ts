@@ -246,15 +246,9 @@ export default defineGkdApp({
         'com.baidu.mobads.sdk.api.MobRewardVideoActivity',
       ],
       rules: [
-        {
-          name: '点击中心广告',
-          key: 0,
-          matches: [
-            'ViewGroup[desc*="close" || desc*="btn"]',
-            'ViewGroup[desc*="skip" || desc*="btn"]',
-            '@ImageView < FrameLayout <5 FrameLayout + FrameLayout >2 TextView[text*="开​发​者"]',
-          ],
-        },
+        '@ImageView < FrameLayout <5 FrameLayout + FrameLayout >2 TextView[text*="开​发​者"]',
+        'ViewGroup[desc*="close" || desc*="btn"]',
+        'ViewGroup[desc*="skip" || desc*="btn"]',
       ],
     },
   ],
