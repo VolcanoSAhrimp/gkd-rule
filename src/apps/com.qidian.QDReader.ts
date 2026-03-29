@@ -163,7 +163,7 @@ export default defineGkdApp({
       desc: '观看n秒立即关闭广告',
       rules: [
         {
-          name: '关闭广告-老版倒计时广告',
+          name: '关闭广告-老版倒计时广告-触发',
           key: 0,
           anyMatches: [
             '@TextView + TextView[text~="已观看视频\\\\d{2}秒，可获得奖励"]',
@@ -171,7 +171,7 @@ export default defineGkdApp({
           activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
         },
         {
-          name: '关闭广告-老版倒计时广告',
+          name: '关闭广告-老版倒计时广告-关闭',
           key: 1,
           preKeys: [0],
           anyMatches: [
