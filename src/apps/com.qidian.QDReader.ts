@@ -344,5 +344,33 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 26,
+      name: '功能类-新的广告关闭方式',
+      desc: '这个是针对于除了旧版和跳转去微信的设置的广告关闭方式，细分激活id',
+      enable: false,
+      rules: [
+        {
+          name: '点击关闭广告',
+          key: 0,
+          matches: ['@TextView[text="| 跳过"] - TextView[text="(1/2)"]'],
+          activityIds: ['.ui.activity.QDBrowserActivity'],
+        },
+        {
+          name: '点击关闭广告',
+          key: 1,
+          matches: ['@TextView[text="｜跳过"] - TextView[text="奖励已领取"]'],
+          activityIds: [
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          ],
+        },
+        {
+          name: '点击关闭广告',
+          key: 2,
+          matches: ['@TextView[text="| 跳过"]'],
+          activityIds: ['.ui.activity.QDBrowserActivity'],
+        },
+      ],
+    },
   ],
 });
