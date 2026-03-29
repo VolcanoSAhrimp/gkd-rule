@@ -170,6 +170,15 @@ export default defineGkdApp({
           ],
           activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
         },
+        {
+          name: '关闭广告-老版倒计时广告',
+          key: 1,
+          preKeys: [0],
+          anyMatches: [
+            '@ImageView <2 RelativeLayout <2 RelativeLayout < [id="android:id/content"]',
+          ],
+          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+        },
       ],
     },
     {
