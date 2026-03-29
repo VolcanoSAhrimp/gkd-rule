@@ -252,6 +252,7 @@ export default defineGkdApp({
           matches: [
             'ViewGroup[desc*="close" || desc*="btn"]',
             'ViewGroup[desc*="skip" || desc*="btn"]',
+            '@ImageView < FrameLayout <5 FrameLayout + FrameLayout >2 TextView[text*="开​发​者"]',
           ],
         },
       ],
