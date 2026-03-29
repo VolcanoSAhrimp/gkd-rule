@@ -351,13 +351,13 @@ export default defineGkdApp({
       enable: false,
       rules: [
         {
-          name: '点击关闭广告',
+          name: '点击关闭广告-跳过(1/2)',
           key: 0,
           matches: ['@TextView[text="| 跳过"] - TextView[text="(1/2)"]'],
           activityIds: ['.ui.activity.QDBrowserActivity'],
         },
         {
-          name: '点击关闭广告',
+          name: '点击关闭广告-奖励已领取',
           key: 1,
           matches: ['@TextView[text="｜跳过"] - TextView[text="奖励已领取"]'],
           activityIds: [
@@ -365,7 +365,7 @@ export default defineGkdApp({
           ],
         },
         {
-          name: '点击关闭广告',
+          name: '点击关闭广告-跳过',
           key: 2,
           matches: ['@TextView[text="| 跳过"]'],
           activityIds: ['.ui.activity.QDBrowserActivity'],
