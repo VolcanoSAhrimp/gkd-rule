@@ -301,6 +301,7 @@ export default defineGkdApp({
           preKeys: [0],
           matches: [
             '@ViewGroup -6 ViewGroup <<4 ViewGroup - ViewGroup >3 ViewGroup[desc="点击退出关闭视频"]',
+            '@View < ViewGroup -4 ViewGroup <<4 ViewGroup - ViewGroup >2 ViewGroup[desc="点击退出关闭视频"]',
           ],
           activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
         },
