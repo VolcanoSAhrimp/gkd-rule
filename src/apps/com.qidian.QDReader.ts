@@ -294,12 +294,13 @@ export default defineGkdApp({
           key: 0,
           matches: ['@ViewGroup[desc="点击退出关闭视频"]'],
           activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+          actionDelay: 100,
         },
         {
           name: '点击坚持退出',
           key: 1,
           preKeys: [0],
-          matches: [
+          anyMatches: [
             '@ViewGroup -6 ViewGroup <<4 ViewGroup - ViewGroup >3 ViewGroup[desc="点击退出关闭视频"]',
             '@View < ViewGroup -4 ViewGroup <<4 ViewGroup - ViewGroup >2 ViewGroup[desc="点击退出关闭视频"]',
           ],
