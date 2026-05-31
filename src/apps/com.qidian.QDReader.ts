@@ -177,7 +177,10 @@ export default defineGkdApp({
           anyMatches: [
             '@ImageView <2 RelativeLayout <2 RelativeLayout < [id="android:id/content"]',
           ],
-          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+          activityIds: [
+            'com.qq.e.tg.RewardvideoPortraitADActivity',
+            '.ui.activity.QDBrowserActivity',
+          ],
         },
       ],
     },
