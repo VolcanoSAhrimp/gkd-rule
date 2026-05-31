@@ -379,5 +379,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 27,
+      name: '功能类-新版承接旧版奖励领取点击',
+      desc: '文本格式：恭喜获得奖励',
+      enable: false,
+      snapshotUrls: 'https://i.gkd.li/snapshot/1780225180361',
+      rules: [
+        {
+          name: '点击领取奖励',
+          key: 0,
+          matches: ['@ToggleButton -2 View > TextView[text="恭喜获得奖励"]'],
+          activityIds: ['com.qq.e.tg.RewardvideoPortraitADActivity'],
+        },
+      ],
+    },
   ],
 });
