@@ -251,5 +251,35 @@ export default defineGkdApp({
         'ViewGroup[desc*="skip" || desc*="btn"]',
       ],
     },
+    {
+      name: '功能类-应用名称进行广告关闭',
+      key: 8,
+      desc: '通过应用名称进行广告关闭',
+      enable: true,
+      snapshotUrls: 'https://i.gkd.li/i/32541082',
+      rules: [
+        {
+          name: '点击领取奖励',
+          key: 0,
+          matches: [
+            '@FrameLayout <2 FrameLayout +3 TextView[text^="应用名称"]',
+          ],
+        },
+      ],
+    },
+    {
+      name: '功能类-系统提示宽带',
+      key: 9,
+      desc: '点击就这样吧button',
+      enable: true,
+      snapshotUrls: 'https://i.gkd.li/i/32541191',
+      rules: [
+        {
+          name: '点击就这样吧',
+          key: 0,
+          matches: ['@Button[desc="就這樣吧"]'],
+        },
+      ],
+    },
   ],
 });
