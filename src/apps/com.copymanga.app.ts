@@ -256,6 +256,7 @@ export default defineGkdApp({
       key: 8,
       desc: '通过应用名称进行广告关闭',
       enable: true,
+      activityIds: 'com.copymanga.app.MainActivity',
       snapshotUrls: 'https://i.gkd.li/i/32541082',
       rules: [
         {
@@ -272,6 +273,7 @@ export default defineGkdApp({
       key: 9,
       desc: '点击就这样吧button',
       enable: true,
+      activityIds: 'com.copymanga.app.MainActivity',
       snapshotUrls: 'https://i.gkd.li/i/32541191',
       rules: [
         {
