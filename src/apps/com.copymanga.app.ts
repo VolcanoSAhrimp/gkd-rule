@@ -237,9 +237,9 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '局部广告-弹出广告关闭',
+      name: '局部广告-页面各处的广告',
       key: 7,
-      desc: '点击中心广告-无法关闭',
+      desc: '页面各处的广告',
       enable: true,
       activityIds: [
         'com.yifan.yf_ads.activity.YFSplashActivity',
@@ -249,6 +249,8 @@ export default defineGkdApp({
         '@ImageView < FrameLayout <5 FrameLayout + FrameLayout >2 TextView[text*="开​发​者"]',
         'ViewGroup[desc*="close" || desc*="btn"]',
         'ViewGroup[desc*="skip" || desc*="btn"]',
+        'ImageView[vid="ad_close"]',
+        'TextView[text="上滑或点击按钮查看详情"] <<2 FrameLayout + FrameLayout',
       ],
     },
     {
