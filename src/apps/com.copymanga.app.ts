@@ -167,7 +167,7 @@ export default defineGkdApp({
           key: 5,
           name: '百度广告',
           activityIds: 'com.baidu.mobads.sdk.api.MobRewardVideoActivity',
-          matches: '@ImageView - RelativeLayout >2 [text="反馈"] ',
+          matches: '@ImageView - RelativeLayout >1 [text="反馈"]',
         },
       ],
     },
