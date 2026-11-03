@@ -332,7 +332,6 @@ export default defineGkdApp({
       key: 14,
       name: '局部广告-视频播放页中间的广告',
       desc: '点击关闭',
-      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
