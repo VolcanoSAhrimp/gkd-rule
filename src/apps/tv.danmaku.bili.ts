@@ -328,5 +328,33 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 14,
+      name: '局部广告-视频播放页中间的广告',
+      desc: '点击关闭',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          key: 0,
+          fastQuery: true,
+          activityIds:
+            'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+          matches: 'FrameLayout[vid="more_layout"] > ImageView',
+          exampleUrls: 'https://e.gkd.li/6817ce7a-076b-4f26-a697-412956af9615',
+          snapshotUrls: 'https://i.gkd.li/i/34298713',
+        },
+        {
+          key: 1,
+          preKeys: 0,
+          fastQuery: true,
+          activityIds:
+            'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+          matches: 'TextView[vid="reason1" && text="不想看该内容"]',
+          snapshotUrls: 'https://i.gkd.li/i/34299106',
+        },
+      ],
+    },
   ],
 });
